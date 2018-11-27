@@ -1,4 +1,5 @@
 
+  
   const discord = require("discord.js");
   const client = new discord.Client();
   const config = require("./config.json");
@@ -31,7 +32,7 @@
 
         const embed = new discord.RichEmbed()
         .setTitle('Help')
-        .setDescription('**Knowledge Base**\n!outdatedserver\n!deleteserver\n!uploadworld\n!serverlimit\n!notstarting')
+        .setDescription('**Knowledge Base**\n!outdatedserver\n!deleteserver\n!uploadworld\n!serverlimit\n!notstarting\n**General**\n!info\n!botinfo\n \nIf what you need is not supported by the bot you can go to #help for community help or #faq for easy anwsers by the staff members ')
         .setColor('#DAA520')
               message.channel.send(embed)
       }
@@ -63,6 +64,36 @@
 
         const embed = new discord.RichEmbed()
         .setTitle('Whats the server limit?')
-        .setDescription('You can have a maxumuim of two servers.')
+        .setDescription('You can have a maximum of two servers.')
         .setColor('#DAA520')
               message.channel.send(embed)
+      }
+      if(cmd === 'notstarting') {
+
+        const embed = new discord.RichEmbed()
+        .setTitle('Server not Starting')
+        .setDescription('First go into "Danger Zone" and try force stopping your server.')
+        .setColor('#DAA520')
+              message.channel.send(embed)
+      }
+      if(cmd === 'info') {
+
+        const embed = new discord.RichEmbed()
+        .setTitle('Welcome to Minehut :tada:')
+        .setDescription('We run over 200,000 free servers for the minecraft community. All of our servers are ddos protected, use powerful SSDs and the latest intel CPUs. \nLaunch your server within seconds at https://minehut.com/')
+        .setColor('#DAA520')
+              message.channel.send(embed)
+      }
+      if(cmd === 'botinfo') {
+
+        const embed = new discord.RichEmbed()
+        .setTitle('Welcome to Minehut Support Bot')
+        .setDescription('This is a support bot made for https://minehut.com by pdxryanpdx#5646')
+        .setColor('#DAA520')
+              message.channel.send(embed)
+      }
+    
+    });
+    client.login(config.token)
+   
+
